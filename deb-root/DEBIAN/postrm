@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "purge" ]; then
+	rm -rf /var/log/graphite-clickhouse || true
+	rm -rf /opt/graphite-clickhouse || true
+	rm -rf /etc/graphite-clickhouse || true
+fi
